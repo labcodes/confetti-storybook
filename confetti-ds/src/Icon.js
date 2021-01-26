@@ -1,47 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import { ICON_TYPES } from "./constants";
+
 export default class Icon extends React.Component {
   static propTypes = {
     /** Type of the Icon to be rendered. */
-    type: PropTypes.oneOf([
-      "arrow-down",
-      "arrow-left",
-      "arrow-right",
-      "arrow-top",
-      "calendar",
-      "coin",
-      "collapse-closed",
-      "collapse-open",
-      "check",
-      "dropdown-closed",
-      "dropdown-open",
-      "edit",
-      "eye-closed",
-      "eye-opened",
-      "track",
-      "key",
-      "logout",
-      "magnifying-glass",
-      "minus",
-      "plus",
-      "reload",
-      "remove",
-      "sort",
-      "star",
-      "trash",
-      "upload",
-      "arrow-fill-right",
-      "arrow-fill-left",
-      "chevron-right",
-      "chevron-left",
-      "menu-expand",
-      "menu-collapse",
-      "menu-default",
-      "external",
-      "wallet",
-      "workspace",
-    ]).isRequired,
+    type: PropTypes.oneOf(ICON_TYPES).isRequired,
     /** Color of the rendered Icon. */
     color: PropTypes.oneOf([
       "white",

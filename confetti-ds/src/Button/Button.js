@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+
 import AbstractButton from "./AbstractButton";
+import { ICON_TYPES } from "../constants";
 
 export default class Button extends React.Component {
   static propTypes = {
@@ -20,7 +22,7 @@ export default class Button extends React.Component {
       "confirmation-invert",
     ]),
     /** Sets the icon related to the button label. Default state: no icon. */
-    icon: PropTypes.string,
+    icon: PropTypes.oneOf(ICON_TYPES),
     /** Sets the button's height. Small = 32px, Normal = 40px, Large = 48px. */
     size: PropTypes.oneOf(["normal", "small", "large"]),
     /** Disables the Button. Will be read by screen readers. When true, will override `disabled`. */
@@ -34,7 +36,7 @@ export default class Button extends React.Component {
   };
 
   static defaultProps = {
-    skin: undefined,
+    skin: "",
     icon: undefined,
     type: "button",
     size: "normal",

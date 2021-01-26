@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { isUndefined } from "lodash";
+
 import Icon from "../Icon";
+import { ICON_TYPES } from "../constants";
 
 export default class AbstractButton extends React.Component {
   static propTypes = {
@@ -12,7 +14,7 @@ export default class AbstractButton extends React.Component {
     /** This is the button label. */
     text: PropTypes.string.isRequired,
     /** Sets the icon related to the button label. Default state: no icon. */
-    icon: PropTypes.string,
+    icon: PropTypes.oneOf(ICON_TYPES),
     /** Sets a special color skin to the button. */
     skin: PropTypes.oneOf([
       "",
