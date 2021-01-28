@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import Icon from "../Icon";
 import { SimpleTag } from "../Tags";
+import { ICON_TYPES } from "../constants";
 
 export default class CardHeader extends React.Component {
   static propTypes = {
@@ -19,7 +20,7 @@ export default class CardHeader extends React.Component {
     /** Sets card's label. */
     categoryLabelText: PropTypes.string,
     /** Sets card's category icon. */
-    categoryIcon: PropTypes.string,
+    categoryIcon: PropTypes.oneOf(ICON_TYPES),
     /** Sets card's category badge color. */
     categoryColor: PropTypes.oneOf(["mineral", "teal", "purple"]),
     /** Sets whether the header will go over the image or not. */
