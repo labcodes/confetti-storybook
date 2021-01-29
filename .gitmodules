@@ -1,0 +1,4 @@
+[submodule "confetti-ds"]
+	path = confetti-ds
+	url = git@github.com:labcodes/confetti-ds.git
+	branch = main
